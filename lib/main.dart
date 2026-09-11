@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'dart:ui';
 
 void main() {
   runApp(const MyApp());
@@ -32,31 +31,48 @@ class MyApp extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+            Row(
+              children: [
+                Text('Afaq'),
+                Text('Afaq'),
+                Text('Afaq'),
+                Text('Afaq'),
+                Text('Afaq'),
+                Text('Afaq'),
+                Text('Afaq'),
+
+              ],
+            ),
             Center(
               child: Container(
-                height: 200,
-                width: 200,
-                padding: EdgeInsets.all(50),
+                height: 250,
+                width: 250,
                 decoration: BoxDecoration(
                   color: Colors.amber,
-                  borderRadius: BorderRadius.only(
-                    topRight: Radius.circular(60),
-                    topLeft: Radius.circular(10),
-                    bottomLeft: Radius.circular(60),
-                    bottomRight: Radius.circular(10),
-                  ),
+                  borderRadius: BorderRadius.circular(10),
                 border: Border.all(
                   color: Colors.red,
-                  width: 2,
+                  width: 1,
                 ),
+                // image: DecorationImage(
+                //   fit: BoxFit.fitHeight,
+                //   image: NetworkImage('https://images.pexels.com/photos/15280423/pexels-photo-15280423.jpeg')
+                //   ),
                 boxShadow: [
                   BoxShadow(
                     color: Colors.blueAccent,
-                    blurRadius: 20,
+                    blurRadius: 15,
                   )
                 ]
                 ),
-                child: Center(child: Text('It is my Container 1')),
+                child: Center(child: Text(
+                  'Log In' ,
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 30,
+                  ),
+                  )
+                  ),
               ),
             )
           ],
