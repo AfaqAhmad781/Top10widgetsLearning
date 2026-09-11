@@ -14,65 +14,31 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.amber,
-          shape: RoundedSuperellipseBorder(
-            borderRadius: BorderRadius.circular(20)
+          shape: RoundedRectangleBorder( 
+            borderRadius: BorderRadius.circular(20),
           ),
-          title: Center(
+          title: const Center(
             child: Text(
               'Learning Containers',
               style: TextStyle(
                 fontSize: 30,
-                fontWeight: FontWeight.w500
+                fontWeight: FontWeight.w500,
               ),
-              ),
+            ),
           ),
         ),
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Row(
-              children: [
-                Text('Afaq'),
-                Text('Afaq'),
-                Text('Afaq'),
-                Text('Afaq'),
-                Text('Afaq'),
-                Text('Afaq'),
-                Text('Afaq'),
-
-              ],
-            ),
-            Center(
-              child: Container(
-                height: 250,
-                width: 250,
-                decoration: BoxDecoration(
-                  color: Colors.amber,
-                  borderRadius: BorderRadius.circular(10),
-                border: Border.all(
-                  color: Colors.red,
-                  width: 1,
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: TextFormField(
+                keyboardType: TextInputType.numberWithOptions(decimal: true),
+                decoration: InputDecoration(
+                  hintText: '0310-0000000',
+                  labelText: 'Please input your Whatsapp number',
                 ),
-                // image: DecorationImage(
-                //   fit: BoxFit.fitHeight,
-                //   image: NetworkImage('https://images.pexels.com/photos/15280423/pexels-photo-15280423.jpeg')
-                //   ),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.blueAccent,
-                    blurRadius: 15,
-                  )
-                ]
-                ),
-                child: Center(child: Text(
-                  'Log In' ,
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 30,
-                  ),
-                  )
-                  ),
               ),
             )
           ],
